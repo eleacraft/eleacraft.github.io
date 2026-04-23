@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de confidentialité — Flynance | Eleacraft</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1B2A4A;
+    --cream: #F8F7F4;
+    --green: #10B981;
+    --slate: #64748B;
+    --border: rgba(27,42,74,0.10);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--navy); line-height: 1.6; }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(248,247,244,0.92); backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border);
+    padding: 0 5vw; height: 60px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 18px; color: var(--navy); text-decoration: none; }
+  .nav-back { font-size: 14px; color: var(--slate); text-decoration: none; }
+  .nav-back:hover { color: var(--navy); }
+
+  .hero { background: var(--navy); padding: 120px 5vw 48px; }
+  .hero-breadcrumb { font-size: 12px; color: rgba(255,255,255,0.35); margin-bottom: 16px; }
+  .hero-breadcrumb a { color: rgba(255,255,255,0.35); text-decoration: none; }
+  .hero-breadcrumb a:hover { color: rgba(255,255,255,0.6); }
+  .hero h1 {
+    font-family: 'Syne', sans-serif; font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700; color: #fff; letter-spacing: -0.02em; margin-bottom: 8px;
+  }
+  .hero-meta { font-size: 13px; color: rgba(255,255,255,0.35); }
+
+  .tabs {
+    background: var(--navy); border-bottom: 0.5px solid rgba(255,255,255,0.08);
+    padding: 0 5vw; display: flex;
+  }
+  .tab { padding: 14px 20px; font-size: 14px; color: rgba(255,255,255,0.4); text-decoration: none; border-bottom: 2px solid transparent; transition: color 0.2s; }
+  .tab.active { color: #fff; border-bottom-color: var(--green); }
+  .tab:hover { color: rgba(255,255,255,0.8); }
+
+  .lang-switcher {
+    display: flex; gap: 8px; padding: 20px 5vw 0; max-width: 760px; margin: 0 auto;
+  }
+  .lang-btn {
+    padding: 6px 16px; border-radius: 999px; border: 0.5px solid var(--border);
+    background: transparent; cursor: pointer; font-size: 13px; font-family: 'DM Sans', sans-serif;
+    color: var(--slate); transition: all 0.2s;
+  }
+  .lang-btn.active { background: var(--navy); color: #fff; border-color: var(--navy); }
+
+  .content { max-width: 760px; margin: 0 auto; padding: 40px 5vw 96px; }
+
+  .policy { display: none; }
+  .policy.active { display: block; }
+
+  .policy-section { margin-bottom: 40px; }
+  .policy-section h2 {
+    font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700;
+    color: var(--navy); margin-bottom: 12px; letter-spacing: -0.01em;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .policy-section h2 .num {
+    width: 28px; height: 28px; border-radius: 8px; background: var(--navy);
+    color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; font-family: 'DM Sans', sans-serif;
+  }
+  .policy-section p { font-size: 15px; color: #475569; line-height: 1.75; }
+  .policy-section .highlight {
+    background: #fff; border-radius: 12px; border: 0.5px solid var(--border);
+    padding: 16px 20px; margin-top: 12px;
+    display: flex; align-items: flex-start; gap: 12px;
+  }
+  .highlight-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+  .highlight p { font-size: 14px; }
+
+  .contact-box {
+    background: var(--navy); border-radius: 16px; padding: 28px;
+    text-align: center; margin-top: 48px;
+  }
+  .contact-box h3 { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+  .contact-box p { font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+  .contact-box a {
+    display: inline-block; padding: 10px 24px; border-radius: 999px;
+    background: rgba(255,255,255,0.1); border: 0.5px solid rgba(255,255,255,0.15);
+    color: #fff; text-decoration: none; font-size: 14px;
+  }
+
+  footer {
+    background: var(--navy); border-top: 0.5px solid rgba(255,255,255,0.08);
+    padding: 24px 5vw; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  }
+  footer p { font-size: 13px; color: rgba(255,255,255,0.35); }
+  footer a { font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">Eleacraft</a>
+  <a href="index.html" class="nav-back">← Flynance</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-breadcrumb">
+    <a href="../index.html">Eleacraft</a> → <a href="index.html">Flynance</a> → Confidentialité
+  </div>
+  <h1>Politique de confidentialité</h1>
+  <p class="hero-meta">Flynance — Dernière mise à jour : avril 2026</p>
+</div>
+
+<div class="tabs">
+  <a href="index.html" class="tab">Présentation</a>
+  <a href="privacy.html" class="tab active">Confidentialité</a>
+</div>
+
+<div class="lang-switcher">
+  <button class="lang-btn active" onclick="showLang('fr')">🇫🇷 Français</button>
+  <button class="lang-btn" onclick="showLang('en')">🇬🇧 English</button>
+</div>
+
+<div class="content">
+
+  <!-- FRANÇAIS -->
+  <div class="policy active" id="policy-fr">
+
+    <div class="policy-section">
+      <div class="highlight">
+        <span class="highlight-icon">✅</span>
+        <p><strong>En résumé :</strong> Flynance ne collecte aucune donnée personnelle. Toutes vos informations financières restent exclusivement sur votre appareil. Nous n'avons aucun accès à vos données.</p>
+      </div>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="num">1</span>Introduction</h2>
+      <p>Flynance est une application de gestion de budget personnel développée par Eleacraft. Nous prenons votre vie privée très au sérieux et avons conçu cette application en mettant la confidentialité au cœur de son architecture.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="num">2</span>Données collectées</h2>
+      <p>Flynance ne collecte aucune donnée personnelle. Toutes vos données (transactions, budgets, comptes, profils) sont stockées exclusivement sur votre appareil dans une base de données locale SQLite. Nous n'avons pas accès à vos données financières.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="num">3</span>Données transmises</h2>
+      <p>Flynance ne transmet aucune donnée à des serveurs externes. L'application fonctionne entièrement hors ligne. Aucune donnée n'est partagée avec des tiers, des annonceurs ou des services d'analyse.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="num">4</span>Sauvegardes</h2>
+      <p>La fonctionnalité de sauvegarde exporte vos données vers un fichier local sur votre appareil. Ce fichier est sous votre contrôle exclusif. Flynance n'a pas accès aux fichiers que vous exportez ni à l'endroit où vous choisissez de les stocker.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="num">5</span>Notifications</h2>
+      <p>Flynance peut envoyer des notifications locales (rappels de paiement, alertes budget, résumés). Ces notifications sont générées localement sur votre appareil et ne transitent par aucun serveur externe.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="num">6</span>Publicité & Tracking</h2>
+      <p>Flynance ne contient aucune publicité et n'intègre aucun outil de tracking publicitaire, aucun SDK d'analyse comportementale, aucun service tiers de collecte de données.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="num">7</span>Enfants</h2>
+      <p>Flynance ne collecte aucune donnée et convient à tous les âges. L'application ne cible pas spécifiquement les mineurs.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="num">8</span>Modifications</h2>
+      <p>Nous pouvons mettre à jour cette politique de confidentialité. En cas de modification importante, nous vous en informerons via une mise à jour de l'application. La date de dernière mise à jour est indiquée en haut de cette page.</p>
+    </div>
+
+    <div class="contact-box">
+      <h3>Une question sur votre confidentialité ?</h3>
+      <p>Nous répondons sous 48h à toutes vos questions.</p>
+      <a href="mailto:support@eleacraft.com">support@eleacraft.com</a>
+    </div>
+
+  </div>
+
+  <!-- ENGLISH -->
+  <div class="policy" id="policy-en">
+
+    <div class="policy-section">
+      <div class="highlight">
+        <span class="highlight-icon">✅</span>
+        <p><strong>In short:</strong> Flynance collects no personal data. All your financial information stays exclusively on your device. We have no access to your data.</p>
+      </div>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="num">1</span>Introduction</h2>
+      <p>Flynance is a personal budget management app developed by Eleacraft. We take your privacy very seriously and have designed this application with privacy at the core of its architecture.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="num">2</span>Data Collection</h2>
+      <p>Flynance does not collect any personal data. All your data (transactions, budgets, accounts, profiles) is stored exclusively on your device in a local SQLite database. We have no access to your financial data.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="num">3</span>Data Transmission</h2>
+      <p>Flynance does not transmit any data to external servers. The app works entirely offline. No data is shared with third parties, advertisers, or analytics services.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="num">4</span>Backups</h2>
+      <p>The backup feature exports your data to a local file on your device. This file is under your exclusive control. Flynance has no access to the files you export or where you choose to store them.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="num">5</span>Notifications</h2>
+      <p>Flynance may send local notifications (payment reminders, budget alerts, summaries). These notifications are generated locally on your device and do not transit through any external server.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="num">6</span>Advertising & Tracking</h2>
+      <p>Flynance contains no advertising and does not integrate any advertising tracking tools, behavioral analytics SDK, or third-party data collection services.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="num">7</span>Children</h2>
+      <p>Flynance collects no data and is suitable for all ages. The app does not specifically target minors.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="num">8</span>Changes</h2>
+      <p>We may update this privacy policy. In case of significant changes, we will inform you through an app update. The last update date is shown at the top of this page.</p>
+    </div>
+
+    <div class="contact-box">
+      <h3>Questions about your privacy?</h3>
+      <p>We reply within 48 hours to all your questions.</p>
+      <a href="mailto:support@eleacraft.com">support@eleacraft.com</a>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Eleacraft. All rights reserved.</p>
+  <a href="mailto:support@eleacraft.com">support@eleacraft.com</a>
+</footer>
+
+<script>
+function showLang(lang) {
+  document.querySelectorAll('.policy').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('policy-' + lang).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+
+</body>
+</html>
